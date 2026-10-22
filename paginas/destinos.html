@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AVENTRA: explora destinos y organiza tu próximo viaje.">
+    <title>Destinos | AVENTRA</title>
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA"></a>
+      <input class="mobile-menu-toggle" id="menu-movil" type="checkbox" aria-label="Mostrar menú de navegación">
+      <label class="mobile-menu-button" for="menu-movil" aria-controls="main-nav mobile-account"><span aria-hidden="true">☰</span><span>Menú</span></label>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="../index.html">Inicio</a>
+        <a href="destinos.html" class="active">Destinos</a>
+        <a href="favoritos.html">Favoritos</a>
+        <a href="itinerario.html">Itinerario</a>
+        <a href="acerca.html">Acerca de</a>
+      </nav>
+      <a id="mobile-account" class="account-link" href="login.html"><span class="account-icon">◉</span> Cuenta</a>
+    </header>
+    <main>
+      <section class="search-section" id="buscar-destinos">
+        <div class="section-wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">ENCUENTRA TU LUGAR</p>
+              <h2>Explora destinos</h2>
+              <p class="muted">Busca por país o ciudad y revisa la información de cada lugar.</p>
+            </div>
+          </div>
+          <form action="destinos.html" class="filter-bar">
+            <label class="search-field"><span>⌕</span><input aria-label="Buscar destino" placeholder="Buscar un país o ciudad..." type="search"/></label><label class="select-field"><span class="sr-only">Región</span><select><option>Región</option><option>América</option><option>Europa</option><option>Asia</option></select></label><button class="btn btn-primary" type="submit">Buscar</button>
+          </form>
+          <div class="small-destination-grid" id="lista-destinos">
+            <article class="mini-card">
+              <div class="mini-art art-spain mini-photo-espana">ES</div>
+              <div class="mini-content">
+                <h3>España</h3>
+                <p>Madrid · Europa — Historia, arte y gastronomía</p>
+                <a class="text-link" href="lugares/detalle-espana.html">Detalles →</a>
+              </div>
+            </article>
+            <article class="mini-card">
+              <div class="mini-art art-colombia mini-photo-colombia">CO</div>
+              <div class="mini-content">
+                <h3>Colombia</h3>
+                <p>Bogotá · América — Cultura y naturaleza</p>
+                <a class="text-link" href="lugares/detalle-colombia.html">Detalles →</a>
+              </div>
+            </article>
+            <article class="mini-card">
+              <div class="mini-art art-japan mini-photo-japon">JP</div>
+              <div class="mini-content">
+                <h3>Japón</h3>
+                <p>Tokio · Asia — Tradición y modernidad</p>
+                <a class="text-link" href="lugares/detalle-japon.html">Detalles →</a>
+              </div>
+            </article>
+            <article class="mini-card">
+              <div class="mini-art art-canada mini-photo-canada">CA</div>
+              <div class="mini-content">
+                <h3>Canadá</h3>
+                <p>Ottawa · América — Naturaleza y ciudades multiculturales</p>
+                <a class="text-link" href="lugares/detalle-canada.html">Detalles →</a>
+              </div>
+            </article>
+            <details class="destination-more">
+              <summary class="btn btn-outline">
+                <span class="destination-more-show">Ver más destinos</span>
+                <span class="destination-more-hide">Ver menos destinos</span>
+              </summary>
+              <div class="small-destination-grid destination-more-grid">
+                <article class="mini-card">
+                  <div class="mini-art art-italy mini-photo-italia">IT</div>
+                  <div class="mini-content">
+                    <h3>Italia</h3>
+                    <p>Roma · Europa — Arte, historia y gastronomía</p>
+                    <a class="text-link" href="lugares/detalle-italia.html">Detalles →</a>
+                  </div>
+                </article>
+                <article class="mini-card">
+                  <div class="mini-art art-spain mini-photo-mexico">MX</div>
+                  <div class="mini-content">
+                    <h3>México</h3>
+                    <p>Ciudad de México · América — Historia y cocina tradicional</p>
+                    <a class="text-link" href="lugares/detalle-mexico.html">Detalles →</a>
+                  </div>
+                </article>
+                <article class="mini-card">
+                  <div class="mini-art art-italy mini-photo-peru">PE</div>
+                  <div class="mini-content">
+                    <h3>Perú</h3>
+                    <p>Lima · América — Herencia andina y gastronomía</p>
+                    <a class="text-link" href="lugares/detalle-peru.html">Detalles →</a>
+                  </div>
+                </article>
+                <article class="mini-card">
+                  <div class="mini-art art-colombia mini-photo-brasil">BR</div>
+                  <div class="mini-content">
+                    <h3>Brasil</h3>
+                    <p>Brasilia · América — Playas y diversidad natural</p>
+                    <a class="text-link" href="lugares/detalle-brasil.html">Detalles →</a>
+                  </div>
+                </article>
+                <article class="mini-card">
+                  <div class="mini-art art-japan mini-photo-argentina">AR</div>
+                  <div class="mini-content">
+                    <h3>Argentina</h3>
+                    <p>Buenos Aires · América — Cultura y paisajes diversos</p>
+                    <a class="text-link" href="lugares/detalle-argentina.html">Detalles →</a>
+                  </div>
+                </article>
+                <article class="mini-card">
+                  <div class="mini-art art-spain mini-photo-francia">FR</div>
+                  <div class="mini-content">
+                    <h3>Francia</h3>
+                    <p>París · Europa — Museos, historia y paisajes</p>
+                    <a class="text-link" href="lugares/detalle-francia.html">Detalles →</a>
+                  </div>
+                </article>
+                <article class="mini-card">
+                  <div class="mini-art art-colombia mini-photo-guatemala">GT</div>
+                  <div class="mini-content">
+                    <h3>Guatemala</h3>
+                    <p>Ciudad de Guatemala · América — Cultura maya y paisajes volcánicos</p>
+                    <a class="text-link" href="lugares/detalle-guatemala.html">Detalles →</a>
+                  </div>
+                </article>
+              </div>
+            </details>
+          </div>
+          <div class="empty-state">
+            <span class="empty-icon">⌕</span>
+            <h3>¿No encontramos destinos?</h3>
+            <p>Prueba con otro nombre o elimina algún filtro.</p>
+            <a class="btn btn-outline" href="destinos.html">Limpiar filtros</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-wrap footer-inner">
+        <a class="brand brand-light" href="../index.html"><img class="brand-logo" src="../img/logo/media_2.png" alt="AVENTRA"></a>
+        <p>Explora. Planifica. Vive la aventura.</p>
+        <a href="../index.html">Volver al inicio ↑</a>
+        <small>© 2026 AVENTRA · Proyecto académico</small>
+      </div>
+    </footer>
+  </body>
+</html>

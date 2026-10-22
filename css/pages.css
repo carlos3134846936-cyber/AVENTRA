@@ -1,0 +1,757 @@
+/* PAGES: estilos organizados por función */
+
+/* PÁGINA PRINCIPAL */
+
+.hero {
+  min-height: 550px;
+  display: grid;
+  grid-template-columns: 1.02fr .98fr;
+  align-items: center;
+  gap: 48px;
+  padding-block: 68px 76px;
+}
+
+.hero h1,.section-heading h2,.detail-copy h2,.planner-intro h2,.account-side h2,.account-form h2 {
+  font-family: Manrope, sans-serif;
+  letter-spacing: -1.7px;
+  line-height: 1.12;
+  margin: 0;
+  font-weight: 800;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 5vw, 66px);
+}
+
+.hero h1 span {
+  color: var(--teal);
+}
+
+.hero-description {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 440px;
+  margin: 22px 0 28px;
+}
+
+.hero-notes {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  color: #75858a;
+  font-size: 12px;
+}
+
+.hero-notes span:first-child {
+  color: var(--teal);
+}
+
+.hero-art {
+  height: 390px;
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  background-image: linear-gradient(0deg, rgba(20, 38, 48, .35), rgba(20, 38, 48, .08)), url("../img/imaginicio/Imagen%20superior.png");
+  background-position: center;
+  background-size: cover;
+  isolation: isolate;
+}
+
+.hero-art:before {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border: 1px solid rgba(42, 164, 169, .25);
+  border-radius: 50%;
+  right: -30px;
+  top: 20px;
+}
+
+.hero-art:after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border: 1px solid rgba(42, 164, 169, .25);
+  border-radius: 50%;
+  right: 15px;
+  top: 65px;
+}
+
+.hero-art .sun,
+.hero-art .mountain {
+  display: none;
+}
+
+.sun {
+  position: absolute;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: #f7cf86;
+  top: 48px;
+  right: 95px;
+  box-shadow: 0 0 0 18px rgba(247, 207, 134, .18);
+}
+
+.mountain {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 260px solid transparent;
+  border-right: 260px solid transparent;
+}
+
+.mountain-back {
+  border-bottom: 265px solid #8fc9bd;
+  left: -70px;
+}
+
+.mountain-front {
+  border-left-width: 310px;
+  border-right-width: 310px;
+  border-bottom: 205px solid #4b9c97;
+  left: 85px;
+}
+
+/* SECCIÓN DE DESTINOS */
+
+.destinations-section {
+  padding-block: 32px 90px;
+}
+
+/* HERRAMIENTAS EN PREPARACIÓN */
+
+.future-tools-section {
+  padding: 0 0 90px;
+}
+
+.future-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 16px;
+}
+
+.future-tool-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 12px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e9efec;
+  border-radius: 12px;
+}
+
+.future-tool-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: #e5f5f1;
+  color: var(--teal);
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.future-tool-card h3 {
+  margin: 0 0 5px;
+  font: 700 15px Manrope, sans-serif;
+}
+
+.future-tool-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.future-tool-status {
+  grid-column: 2;
+  justify-self: start;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background: #f5f2e8;
+  color: #718087;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+}
+
+/* PÁGINA DE BÚSQUEDA */
+
+.search-section {
+  background: #f7f9f7;
+  padding: 80px 0;
+}
+
+/* DETALLE DE DESTINO */
+
+.details-section {
+  padding-block: 90px;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.details-section>.detail-visual,
+.details-section>.detail-copy {
+  animation: detail-enter .9s ease-out both;
+}
+
+.details-section>.detail-copy {
+  animation-delay: .16s;
+}
+
+@keyframes detail-enter {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .details-section>.detail-visual,
+  .details-section>.detail-copy {
+    animation: detail-fade .65s ease-out both;
+  }
+
+  .details-section>.detail-copy {
+    animation-delay: .12s;
+  }
+}
+
+@keyframes detail-fade {
+  from {
+    opacity: .3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.travel-guide {
+  padding-bottom: 80px;
+}
+
+.travel-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 16px;
+}
+
+.travel-guide-card {
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e9efec;
+  border-radius: 12px;
+}
+
+.travel-guide-card .eyebrow {
+  margin-bottom: 8px;
+}
+
+.travel-guide-card h3 {
+  margin: 0 0 8px;
+  font: 700 16px Manrope, sans-serif;
+}
+
+.travel-guide-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.travel-faq {
+  display: grid;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.travel-faq details {
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid #e9efec;
+  border-radius: 10px;
+}
+
+.travel-faq summary {
+  color: var(--navy);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.travel-faq details p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.detail-visual {
+  height: 390px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 30px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #e4ad70, #b65a42 50%, #642f35);
+}
+
+.detail-visual:before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  top: 25px;
+  right: -50px;
+  box-shadow: 0 0 0 35px rgba(255, 255, 255, .05), 0 0 0 70px rgba(255, 255, 255, .05);
+}
+
+.detail-visual:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(20, 38, 48, .4), transparent 65%);
+}
+
+.detail-visual>* {
+  position: relative;
+  z-index: 1;
+}
+
+.visual-overline {
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.detail-visual strong {
+  font: 800 48px Manrope, sans-serif;
+  letter-spacing: 3px;
+}
+
+.visual-subtitle {
+  font-size: 13px;
+}
+
+.detail-copy>p.muted {
+  margin: 15px 0 25px;
+}
+
+.fact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  border-block: 1px solid var(--line);
+  padding: 22px 0;
+}
+
+.fact-grid div span,.fact-grid div strong {
+  display: block;
+}
+
+.fact-grid span {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.fact-grid strong {
+  font-size: 15px;
+}
+
+/* PÁGINA DEL CLIMA */
+
+.weather-section {
+  background: var(--cream);
+  padding: 78px 0;
+}
+
+.weather-layout {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.weather-layout>div:first-child h2 {
+  font: 800 36px/1.15 Manrope, sans-serif;
+  letter-spacing: -1px;
+}
+
+.weather-layout>div:first-child .muted {
+  margin: 15px 0 22px;
+}
+
+/* PÁGINA DE FAVORITOS */
+
+.favorites-section {
+  padding-block: 85px;
+}
+
+.favorite-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* FORMULARIO DE VIAJE */
+
+.planner-section {
+  background: #f6f8f6;
+  padding: 85px 0;
+}
+
+.planner-layout {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 75px;
+  align-items: start;
+}
+
+.planner-intro {
+  padding-top: 35px;
+  position: relative;
+}
+
+.planner-intro h2 {
+  font-size: 42px;
+}
+
+.planner-intro .muted {
+  max-width: 350px;
+  margin-top: 20px;
+}
+
+.planner-decoration {
+  font-size: 120px;
+  color: rgba(42, 164, 169, .13);
+  transform: rotate(-18deg);
+  margin-top: 30px;
+}
+
+.planner-form {
+  background: #fff;
+  border: 1px solid #e8eeeb;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.planner-form label,.account-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #40535a;
+  margin-bottom: 16px;
+}
+
+.planner-form input,.planner-form select,.account-form input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 12px;
+  color: var(--navy);
+  background: #fff;
+  min-width: 0;
+}
+
+.planner-form input:focus,.planner-form select:focus,.account-form input:focus {
+  border-color: var(--teal);
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(42, 164, 169, .1);
+}
+
+/* PÁGINA DE ITINERARIO */
+
+.itinerary-result {
+  padding-top: 70px;
+}
+
+/* PÁGINAS DE CUENTA */
+
+.account-section {
+  margin-block: 90px;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.account-side {
+  background: var(--navy);
+  color: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 560px;
+  position: relative;
+  overflow: hidden;
+}
+
+.account-side>div:nth-child(2) {
+  position: relative;
+  z-index: 1;
+}
+
+.account-side .eyebrow {
+  color: var(--cyan);
+}
+
+.account-side h2 {
+  font-size: 36px;
+  max-width: 330px;
+}
+
+.account-side p:not(.eyebrow) {
+  color: #c2d0d3;
+  font-size: 13px;
+  max-width: 310px;
+}
+
+.account-orbit {
+  position: absolute;
+  bottom: -40px;
+  right: -25px;
+  border: 1px solid rgba(78, 191, 194, .4);
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: rgba(78, 191, 194, .65);
+  font-size: 100px;
+}
+
+.account-forms {
+  padding: 34px 42px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.account-form h2 {
+  font-size: 26px;
+  margin-bottom: 22px;
+}
+
+.account-form .eyebrow {
+  font-size: 9px;
+}
+
+.account-form label {
+  margin-bottom: 14px;
+}
+
+.account-form input {
+  font-size: 12px;
+}
+
+.account-form .btn {
+  margin-top: 3px;
+}
+
+/* PÁGINA ACERCA DE */
+
+.about-section {
+  background: #f7f9f7;
+  padding: 80px 0;
+}
+
+.about-lead {
+  max-width: 560px;
+}
+
+.about-mark {
+  width: 95px;
+  height: 95px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d1e5df;
+  border-radius: 28px;
+  color: var(--teal);
+  font: 800 55px Manrope, sans-serif;
+  transform: rotate(8deg);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.about-grid article {
+  background: #fff;
+  border: 1px solid #e7eeea;
+  border-radius: 12px;
+  padding: 23px 20px;
+}
+
+.about-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  background: #e5f5f1;
+  color: var(--teal);
+  border-radius: 12px;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.about-grid .eyebrow {
+  font-size: 9px;
+  margin-bottom: 8px;
+}
+
+.about-grid h3 {
+  font: 700 15px Manrope, sans-serif;
+  margin: 0 0 10px;
+}
+
+.about-grid p:not(.eyebrow) {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.about-grid a {
+  color: var(--teal);
+}
+
+/* DETALLES ADICIONALES */
+
+.extra-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-block: 25px;
+  border-bottom: 1px solid var(--line);
+}
+
+.extra-details h2 {
+  font: 800 25px Manrope, sans-serif;
+  margin: 0;
+}
+
+.extra-details p {
+  color: var(--muted);
+  margin: 3px 0 0;
+  font-size: 12px;
+}
+
+/* VARIANTES DE DESTINO */
+
+.colombia-visual {
+  background: linear-gradient(145deg, #f2c34e, #278c7c 55%, #185d62);
+}
+
+.japan-visual {
+  background: linear-gradient(145deg, #f4d8d1, #d98e9a 55%, #3b6f75);
+}
+
+.canada-visual {
+  background: linear-gradient(145deg, #e7eeee, #cb5556 55%, #8d343c);
+}
+
+.italy-visual {
+  background: linear-gradient(145deg, #74b69a, #f3f0df 55%, #d56c65);
+}
+
+.detail-visual[class*="country-photo-"] {
+  background-position: center;
+  background-size: cover;
+}
+
+.detail-visual.country-photo-argentina {
+  background-image: linear-gradient(0deg, rgba(20, 38, 48, .38), rgba(20, 38, 48, .08)), url("../img/paises/argentina.png");
+}
+
+.detail-visual.country-photo-brasil {
+  background-image: linear-gradient(0deg, rgba(20, 38, 48, .38), rgba(20, 38, 48, .08)), url("../img/paises/brasil.png");
+}
+
+.detail-visual.country-photo-canada {
+  background-image: linear-gradient(0deg, rgba(20, 38, 48, .38), rgba(20, 38, 48, .08)), url("../img/paises/canada.png");
+}
+
+.detail-visual.country-photo-colombia {
+  background-image: linear-gradient(0deg, rgba(20, 38, 48, .38), rgba(20, 38, 48, .08)), url("../img/paises/colombia.png");
+}
+
+.detail-visual.country-photo-espana {
+  background-image: linear-gradient(0deg, rgba(20, 38, 48, .38), rgba(20, 38, 48, .08)), url("../img/paises/espa%C3%B1a.png");
+}
+
+.detail-visual.country-photo-francia {
+  background-image: linear-gradient(0deg, rgba(20, 38, 48, .38), rgba(20, 38, 48, .08)), url("../img/paises/francia.png");
+}
+
+.detail-visual.country-photo-guatemala {
+  background-image: linear-gradient(0deg, rgba(20, 38, 48, .38), rgba(20, 38, 48, .08)), url("../img/paises/guatemala.png");
+}
+
+.detail-visual.country-photo-italia {
+  background-image: linear-gradient(0deg, rgba(20, 38, 48, .38), rgba(20, 38, 48, .08)), url("../img/paises/italia.jpg");
+}
+
+.detail-visual.country-photo-japon {
+  background-image: linear-gradient(0deg, rgba(20, 38, 48, .38), rgba(20, 38, 48, .08)), url("../img/paises/japon.jpg");
+}
+
+.detail-visual.country-photo-mexico {
+  background-image: linear-gradient(0deg, rgba(20, 38, 48, .38), rgba(20, 38, 48, .08)), url("../img/paises/mexico.png");
+}
+
+.detail-visual.country-photo-peru {
+  background-image: linear-gradient(0deg, rgba(20, 38, 48, .38), rgba(20, 38, 48, .08)), url("../img/paises/peru.png");
+}
+
+/* LISTA DE DESTINOS: EXPANSIÓN SIN JAVASCRIPT */
+
+.destination-more {
+  grid-column: 1 / -1;
+}
+
+.destination-more summary {
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+  list-style: none;
+}
+
+.destination-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.destination-more-hide,
+.destination-more[open] .destination-more-show {
+  display: none;
+}
+
+.destination-more[open] .destination-more-hide {
+  display: inline;
+}
+
+.destination-more[open] .destination-more-grid {
+  margin-top: 16px;
+}

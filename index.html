@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AVENTRA: explora destinos y organiza tu próximo viaje.">
+    <title>Inicio | AVENTRA</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="AVENTRA, inicio"><img class="brand-logo" src="img/logo/media_2.png" alt="AVENTRA"></a>
+      <input class="mobile-menu-toggle" id="menu-movil" type="checkbox" aria-label="Mostrar menú de navegación">
+      <label class="mobile-menu-button" for="menu-movil" aria-controls="main-nav mobile-account"><span aria-hidden="true">☰</span><span>Menú</span></label>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="paginas/destinos.html">Destinos</a>
+        <a href="paginas/favoritos.html">Favoritos</a>
+        <a href="paginas/itinerario.html">Itinerario</a>
+        <a href="paginas/acerca.html">Acerca de</a>
+      </nav>
+      <a id="mobile-account" class="account-link" href="paginas/login.html"><span class="account-icon">◉</span> Cuenta</a>
+    </header>
+    <main>
+      <section class="hero section-wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span>TU PRÓXIMA AVENTURA COMIENZA AQUÍ</p>
+          <h1>Planifica tu<br/><span>próximo viaje</span></h1>
+          <p class="hero-description">Explora destinos, consulta el clima y organiza tu itinerario desde un solo lugar.</p>
+          <form action="https://www.google.com/maps/search/" class="search-bar" method="get" target="_blank">
+            <input name="api" type="hidden" value="1">
+            <span aria-hidden="true" class="search-icon">⌕</span>
+            <input aria-label="Buscar país o ciudad" name="query" placeholder="¿A dónde quieres viajar?" required type="search">
+            <button class="btn btn-primary" type="submit">Explorar <span>→</span></button>
+          </form>
+          <div class="hero-notes">
+            <span>✦ Destinos increíbles</span>
+            <span>⌁ Viajes a tu manera</span>
+          </div>
+        </div>
+        <div aria-label="Ilustración de viaje" class="hero-art">
+          <div class="sun"></div>
+          <div class="mountain mountain-back"></div>
+          <div class="mountain mountain-front"></div>
+          <div class="art-label">
+            <span class="pin">⌖</span>
+            <div>
+              <strong>El mundo te espera</strong><small>Encuentra tu próximo destino</small>
+            </div>
+          </div>
+          <div class="floating-stamp">
+            VIAJA<br/>DESCUBRE<br/>VIVE
+          </div>
+        </div>
+      </section>
+      <section class="section-wrap destinations-section" id="destinos">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">INSPÍRATE</p>
+            <h2>Destinos destacados</h2>
+            <p class="muted">Lugares que pueden convertirse en tu próxima historia.</p>
+          </div>
+          <a class="text-link" href="paginas/destinos.html">Ver todos los destinos <span>→</span></a>
+        </div>
+        <div class="destination-grid">
+          <article class="destination-card card-colombia">
+            <span class="card-tag">AMÉRICA DEL SUR</span>
+            <div class="destination-card-bottom">
+              <h3>Colombia</h3>
+              <p>Color, cultura y naturaleza</p>
+              <a class="btn btn-light" href="paginas/lugares/detalle-colombia.html">Detalles <span>↗</span></a>
+            </div>
+          </article>
+          <article class="destination-card card-spain">
+            <span class="card-tag">EUROPA</span>
+            <div class="destination-card-bottom">
+              <h3>España</h3>
+              <p>Historia, arte y gastronomía</p>
+              <a class="btn btn-light" href="paginas/lugares/detalle-espana.html">Detalles <span>↗</span></a>
+            </div>
+          </article>
+          <article class="destination-card card-japan">
+            <span class="card-tag">ASIA</span>
+            <div class="destination-card-bottom">
+              <h3>Japón</h3>
+              <p>Tradición y modernidad</p>
+              <a class="btn btn-light" href="paginas/lugares/detalle-japon.html">Detalles <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="future-tools-section">
+        <div class="section-wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">AVENTRA EN CAMINO</p>
+              <h2>Más herramientas para tu viaje</h2>
+              <p class="muted">Estamos preparando nuevas formas de ayudarte a planificar.</p>
+            </div>
+          </div>
+          <div class="future-tools-grid">
+            <article class="future-tool-card">
+              <span class="future-tool-icon" aria-hidden="true">＄</span>
+              <div>
+                <h3>Presupuesto de viaje</h3>
+                <p>Organiza los gastos estimados de tu próxima aventura.</p>
+              </div>
+              <span class="future-tool-status">Próximamente</span>
+            </article>
+            <article class="future-tool-card">
+              <span class="future-tool-icon" aria-hidden="true">⌕</span>
+              <div>
+                <h3>Búsqueda y filtros</h3>
+                <p>Encuentra destinos por región, clima y tipo de experiencia.</p>
+              </div>
+              <span class="future-tool-status">Próximamente</span>
+            </article>
+            <article class="future-tool-card">
+              <span class="future-tool-icon" aria-hidden="true">♡</span>
+              <div>
+                <h3>Favoritos personales</h3>
+                <p>Guarda los lugares que quieres visitar.</p>
+              </div>
+              <span class="future-tool-status">Próximamente</span>
+            </article>
+            <article class="future-tool-card">
+              <span class="future-tool-icon" aria-hidden="true">▤</span>
+              <div>
+                <h3>Itinerario editable</h3>
+                <p>Organiza actividades y fechas para cada día del viaje.</p>
+              </div>
+              <span class="future-tool-status">Próximamente</span>
+            </article>
+            <article class="future-tool-card">
+              <span class="future-tool-icon" aria-hidden="true">☼</span>
+              <div>
+                <h3>Clima del destino</h3>
+                <p>Consulta las condiciones para prepararte antes de salir.</p>
+              </div>
+              <span class="future-tool-status">Próximamente</span>
+            </article>
+            <article class="future-tool-card">
+              <span class="future-tool-icon" aria-hidden="true">✓</span>
+              <div>
+                <h3>Lista para empacar</h3>
+                <p>Prepara lo necesario para disfrutar tu viaje.</p>
+              </div>
+              <span class="future-tool-status">Próximamente</span>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-wrap footer-inner">
+        <a class="brand brand-light" href="index.html" aria-label="AVENTRA, inicio"><img class="brand-logo" src="img/logo/media_2.png" alt="AVENTRA"></a>
+        <p>Explora. Planifica. Vive la aventura.</p>
+        <a href="index.html">Volver al inicio ↑</a>
+        <small>© 2026 AVENTRA · Proyecto académico</small>
+      </div>
+    </footer>
+  </body>
+</html>
